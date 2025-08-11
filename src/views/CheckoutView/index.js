@@ -38,6 +38,7 @@ const CheckoutView = ({ handleApplyFinancial, handleCheckout, Courses, goBack, c
                         <FontBold name={`Address: ${'Marine Point Block-9 Clifton, Karachi'}`} style={styles.userName} />
                     </View>
 
+
                     <View style={styles.bottomContainer}>
                         <View style={styles.totalRow}>
                             <FontSemiBold name={'TOTAL AMOUNT:'} style={styles.total} />

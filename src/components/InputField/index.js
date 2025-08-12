@@ -29,6 +29,7 @@ const InputField = ({
     leftIconPath,
     handleUploadDocument,
     uploadIcon,
+    placeholderTextColor,
     ...rest
 
 }) => {
@@ -45,7 +46,7 @@ const InputField = ({
                 style={[styles.InputField, style,
                 { paddingLeft: leftIconPath ? vw * 14 : vw * 4 }
                 ]}
-                placeholderTextColor={COLORS.textColor}
+                placeholderTextColor={placeholderTextColor || COLORS.textColor}
                 mask={mask}
                 autoFocus={autoFocus}
                 keyboardType={keyboardType}

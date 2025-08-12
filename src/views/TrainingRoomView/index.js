@@ -4,9 +4,10 @@ import Container from '../../components/Container'
 import TopView from '../../components/TopView'
 import { images } from '../../assets'
 import { styles } from './styles'
-import FontBold from '../../components/Typography/FontBold'
+import TrainingRoomCard from './components/TrainingRoomCard'
+import { vh, vw } from '../../assets/theme/dimention';
 
-const TrainingRoomView = ({ RoomData }) => {
+const TrainingRoomView = ({ RoomData, TrainingRoomCards, goBack }) => {
 
     const renderItem = ({ item }) => {
         return (
@@ -14,18 +15,30 @@ const TrainingRoomView = ({ RoomData }) => {
         )
     }
     return (
-        <Container>
-            <TopView tittle={'Training Room'} />
+        <Container style={styles.container}>
+            <TopView tittle={'Training Room'} onPress={goBack} />
 
-            <FlatList
-                data={RoomData}
-                renderItem={renderItem}
-                keyExtractor={item => item.id}
-                horizontal={true}
-                contentContainerStyle={styles.roomsContainer}
-            />
+            <View>
+                <FlatList
+                    ListHeaderComponent={
+                        <FlatList
+                            data={RoomData}
+                            renderItem={renderItem}
+                            keyExtractor={item => item.id}
+                            horizontal
+                            contentContainerStyle={styles.roomsContainer}
+                            showsHorizontalScrollIndicator={false}
+                        />
+                    }
 
-            <FontBold name={'ehjfasjkh'} />
+                    data={TrainingRoomCards}
+                    renderItem={({ item }) => <TrainingRoomCard item={item} />}
+                    keyExtractor={item => item.id}
+                    contentContainerStyle={{ paddingBottom: vh * 10 }}
+                    showsVerticalScrollIndicator={false}
+                />
+            </View>
+
         </Container>
     )
 }

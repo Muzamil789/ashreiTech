@@ -5,8 +5,7 @@ import { pick } from '@react-native-documents/picker';
 
 
 const useScholarshipViewModel = () => {
-    // const [degree, setDegree] = useState(null);
-
+    const [showModal, setShowModal] = useState(false);
     const [files, setFiles] = useState({
         degree: {
 
@@ -23,7 +22,7 @@ const useScholarshipViewModel = () => {
     const navigation = useNavigation();
 
     const goBack = () => {
-        // navigation.goBack()
+        navigation.goBack()
     }
 
     console.log(files.degree, 'files files')
@@ -46,18 +45,24 @@ const useScholarshipViewModel = () => {
 
 
     const applyScholarship = () => {
-
+        setShowModal(true)
     }
 
+    const handleSuccessModal = () => {
+        navigation.navigate('Dashboard')
+        setShowModal(false)
+    }
 
     return {
         states: {
-            files
+            files,
+            showModal
         },
         functions: {
             goBack,
             handleUploadDegree,
-            applyScholarship
+            applyScholarship,
+            handleSuccessModal
         }
     }
 }

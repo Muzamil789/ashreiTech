@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native'
+import { View, Image } from 'react-native'
 import React from 'react'
 import Container from '../../components/Container'
 import TopView from '../../components/TopView'
@@ -37,7 +37,6 @@ const CheckoutView = ({ handleApplyFinancial, handleCheckout, Courses, goBack, c
                         <FontBold name={`Email: ${'raheemiqbal@tech.com'}`} style={styles.userName} />
                         <FontBold name={`Address: ${'Marine Point Block-9 Clifton, Karachi'}`} style={styles.userName} />
                     </View>
-
 
                     <View style={styles.bottomContainer}>
                         <View style={styles.totalRow}>

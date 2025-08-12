@@ -8,12 +8,15 @@ import { styles } from './styles'
 import InputField from '../../components/InputField'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import Button from '../../components/Button'
+import SuccessModal from '../../components/Modals/SuccessModal'
 
 const ScholarshipView = ({
     goBack,
     handleUploadDegree,
     files,
     applyScholarship,
+    showModal,
+    handleSuccessModal
 }) => {
     console.log(files, 'files')
     return (
@@ -67,6 +70,13 @@ const ScholarshipView = ({
                 </View>
             </KeyboardAwareScrollView>
 
+            <SuccessModal
+                modalVisible={showModal}
+                heading={'You’ve Applied Successfully!'}
+                description={'Our team will share the details on your email shortly.'}
+                buttonText={'Done'}
+                onPress={handleSuccessModal}
+            />
         </Container>
     )
 }

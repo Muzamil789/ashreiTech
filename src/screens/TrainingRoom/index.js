@@ -6,13 +6,14 @@ import useTrainingRoomViewModel from '../../useviewmodels/useTrainingRoomViewMod
 const TrainingRoom = () => {
     const { states, functions } = useTrainingRoomViewModel();
     const {
-        RoomData
+        RoomData,
+        TrainingRoomCards
     } = states;
     const {
-
+        goBack
     } = functions;
     return (
-        <TrainingRoomView RoomData={RoomData} />
+        <TrainingRoomView RoomData={RoomData} TrainingRoomCards={TrainingRoomCards} goBack={goBack} />
     )
 }
 

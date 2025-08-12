@@ -9,7 +9,8 @@ export const images = {
     boardRoom: require('./images/boardRoom.png'),
     conferenceRoom: require('./images/conferenceRoom.png'),
     scholarship: require('./images/scholarship.png'),
-
+    alRazi: require('./images/alRazi.jpg'),
+    invite: require('./images/invite.png'),
 };
 
 export const icons = {
@@ -34,6 +35,12 @@ export const icons = {
     remove: require('./icons/remove.png'),
     saveForLater: require('./icons/saveForLater.png'),
     uploadDocument: require('./icons/uploadDocument.png'),
+    location: require('./icons/location.png'),
+    TwoPerson: require('./icons/TwoPerson.png'),
+    triangle: require('./icons/triangle.png'),
+    whatsApp: require('./icons/whatsApp.png'),
+    email: require('./icons/email.png'),
+    share: require('./icons/share.png'),
 };
 
 export const drawerIcons = {

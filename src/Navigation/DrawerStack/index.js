@@ -17,6 +17,7 @@ import TabStack from '../TabStack';
 import TrainingRoom from '../../screens/TrainingRoom';
 import Scholarship from '../../screens/Scholarship';
 import Checkout from '../../screens/Checkout';
+import Invite from '../../screens/Invite';
 
 
 
@@ -70,7 +71,7 @@ const routes = [
         id: 7,
         name: 'Invite',
         icon: drawerIcons.drawerInvite,
-        to: 'Dashboard',
+        to: 'Invite',
     },
 
     {
@@ -171,7 +172,7 @@ const DrawerStack = () => {
                 headerShown: false,
             }}
         >
-            <Drawer.Screen name="Dashboard" component={Dashboard} />
+            <Drawer.Screen name="Dashboard" component={TabStack} />
             <Drawer.Screen name="Profile" component={Profile} />
             <Drawer.Screen name="MyCourses" component={MyCourses} />
             <Drawer.Screen name="Notification" component={Notification} />
@@ -185,6 +186,7 @@ const DrawerStack = () => {
             <Drawer.Screen name='TrainingRoom' component={TrainingRoom} />
             <Drawer.Screen name='Scholarship' component={Scholarship} />
             <Drawer.Screen name='Checkout' component={Checkout} />
+            <Drawer.Screen name='Invite' component={Invite} />
         </Drawer.Navigator>
 
     )

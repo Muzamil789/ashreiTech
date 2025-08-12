@@ -4,8 +4,8 @@ import useScholarshipViewModel from '../../useviewmodels/useScholarshipViewModel
 
 const Scholarship = () => {
     const { states, functions } = useScholarshipViewModel();
-    const { degree, files } = states;
-    const { goBack, handleUploadDegree, applyScholarship } = functions;
+    const { degree, files, showModal } = states;
+    const { goBack, handleUploadDegree, applyScholarship, handleSuccessModal } = functions;
     return (
         <ScholarshipView
             goBack={goBack}
@@ -13,6 +13,8 @@ const Scholarship = () => {
             degree={degree}
             files={files}
             applyScholarship={applyScholarship}
+            showModal={showModal}
+            handleSuccessModal={handleSuccessModal}
         />
     )
 }

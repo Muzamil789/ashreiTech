@@ -8,12 +8,14 @@ import { vh, vw } from '../../assets/theme/dimention';
 import { COLORS } from '../../assets/theme/colors';
 import AddToCart from '../../screens/AddToCart';
 import FontBold from '../../components/Typography/FontBold';
+import HomeStack from '../HomeStack';
 
 const TabStack = () => {
     const Tab = createBottomTabNavigator();
 
     return (
         <Tab.Navigator
+            initialRouteName="Dashboard"
             screenOptions={({ route }) => ({
                 headerShown: false,
                 tabBarShowLabel: true,
@@ -29,7 +31,7 @@ const TabStack = () => {
                 tabBarIcon: ({ focused }) => {
                     let icon;
 
-                    if (route.name === 'Home') {
+                    if (route.name === 'Dashboard') {
                         icon = focused ? tabIcons.tabHome : tabIcons.tabHome;
                     } if (route.name === 'Courses') {
                         icon = focused ? tabIcons.tabHome : tabIcons.tabCourses;
@@ -59,7 +61,7 @@ const TabStack = () => {
                 },
             })}
         >
-            <Tab.Screen name="Home" component={Dashboard} options={{ headerShown: false }} />
+            <Tab.Screen name="Dashboard" component={HomeStack} options={{ headerShown: false }} />
             <Tab.Screen name="Courses" component={MyCourses} options={{ headerShown: false }} />
             <Tab.Screen name="Wishlist" component={MyCourses} options={{ headerShown: false }} />
             <Tab.Screen name="Cart" component={AddToCart} options={{ headerShown: false }} />

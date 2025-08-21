@@ -11,6 +11,11 @@ export const images = {
     scholarship: require('./images/scholarship.png'),
     alRazi: require('./images/alRazi.jpg'),
     invite: require('./images/invite.png'),
+    productImage: require('./images/productImage.png'),
+    course1: require('./images/course1.png'),
+    course2: require('./images/course2.png'),
+    course3: require('./images/course3.png'),
+    course4: require('./images/course4.png'),
 };
 
 export const icons = {
@@ -41,6 +46,8 @@ export const icons = {
     whatsApp: require('./icons/whatsApp.png'),
     email: require('./icons/email.png'),
     share: require('./icons/share.png'),
+    menu: require('./icons/menu.png'),
+    check: require('./icons/check.png'),
 };
 
 export const drawerIcons = {

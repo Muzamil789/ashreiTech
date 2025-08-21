@@ -16,8 +16,6 @@ const useForgotPasswordViewModel = () => {
     const navigation = useNavigation();
 
 
-    console.log(route.params, 'route route')
-
     useEffect(() => {
         if (route.params?.fromSignup) {
             setStep(2);

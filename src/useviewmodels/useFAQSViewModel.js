@@ -43,7 +43,6 @@ const useFAQSViewModel = () => {
         else {
             setSelectedIndex(index)
         }
-
     }
 
     return {

@@ -11,7 +11,6 @@ import { images } from '../../assets'
 import SuccessModal from '../../components/Modals/SuccessModal'
 
 const CheckoutView = ({ handleApplyFinancial, handleCheckout, Courses, goBack, checkoutModal, handleCloseCheckoutModal }) => {
-    console.log(Courses, 'Courses')
     return (
         <Container>
             <TopView tittle={'Checkout Details'} onPress={goBack} />

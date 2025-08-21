@@ -25,8 +25,6 @@ const useScholarshipViewModel = () => {
         navigation.goBack()
     }
 
-    console.log(files.degree, 'files files')
-
     const handleUploadDegree = async (fieldName) => {
         try {
             const result = await pick({

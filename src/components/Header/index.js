@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         shadowColor: '#000',
         elevation: 8,
+        zIndex: 111
 
     },
     drawerIcon: {

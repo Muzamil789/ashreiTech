@@ -18,7 +18,6 @@ const ScholarshipView = ({
     showModal,
     handleSuccessModal
 }) => {
-    console.log(files, 'files')
     return (
         <Container>
             <TopView onPress={goBack} />

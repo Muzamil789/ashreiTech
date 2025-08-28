@@ -1,5 +1,5 @@
 import { View, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { vh, vw } from '../../assets/theme/dimention'
 import { icons, images } from '../../assets'
 import { useNavigation } from '@react-navigation/native'
@@ -17,7 +17,7 @@ const Header = () => {
                 <Image source={images.ashreiTechLogo} style={styles.logo} />
             </View>
             <View style={styles.searchContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Search')}>
                     <Image source={icons.headerSearch} style={styles.headerIcons} />
                 </TouchableOpacity>
                 <TouchableOpacity>
@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
 
     },
     drawerIcon: {
-        width: vw * 10,
-        height: vw * 10,
+        width: vw * 7,
+        height: vw * 7,
         resizeMode: 'contain',
     },
     logo: {
@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
         gap: vw * 3
     },
     headerIcons: {
-        width: vw * 8,
-        height: vw * 8,
+        width: vw * 7,
+        height: vw * 7,
         resizeMode: 'contain',
     }
 })

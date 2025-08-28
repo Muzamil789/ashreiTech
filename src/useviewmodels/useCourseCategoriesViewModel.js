@@ -32,12 +32,16 @@ const useCourseCategoriesViewModel = () => {
         },
     ]
 
+    const handleDetail = (index) => {
+        console.log(index)
+    }
+
     return {
         states: {
             coursesCategories
         },
         functions: {
-
+            handleDetail
         }
     }
 }

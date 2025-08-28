@@ -2,10 +2,33 @@ import React from 'react'
 import ProductPageView from '../../views/ProductPageView'
 import useProductPageViewModel from '../../useviewmodels/useProductPageViewModel'
 
-const ProductPage = () => {
+const ProductPage = ({ route }) => {
+    const { _item } = route.params
     const { states, functions } = useProductPageViewModel()
-    const { days, time, selectedDay, selectedTime, enrollModalVisible, readMore, skills, selectedCheckBox, showMoreSkills, companyImages, showAccordion } = states;
-    const { handleDay, handleTime, handleEnrollCourse, handleEnrollContinue, handleReadMore, handleCheckbox, handleMoreSkills, handleShowAccordion } = functions;
+    const {
+        days,
+        time,
+        selectedDay,
+        selectedTime,
+        enrollModalVisible,
+        readMore,
+        skills,
+        selectedCheckBox,
+        showMoreSkills,
+        companyImages,
+        showAccordion
+    } = states;
+    const {
+        handleDay,
+        handleTime,
+        handleEnrollCourse,
+        handleEnrollContinue,
+        handleReadMore,
+        handleCheckbox,
+        handleMoreSkills,
+        handleShowAccordion,
+        handleAddToCart
+    } = functions;
     return (
         <ProductPageView
             days={days}
@@ -27,6 +50,8 @@ const ProductPage = () => {
             companyImages={companyImages}
             showAccordion={showAccordion}
             handleShowAccordion={handleShowAccordion}
+            _item={_item}
+            handleAddToCart={handleAddToCart}
         />
     )
 }

@@ -11,7 +11,6 @@ export default Container;
 
 const styles = StyleSheet.create({
     container: {
-        flexGrow: 1,
         flex: 1,
         backgroundColor: COLORS.white,
         paddingHorizontal: vw * 4,

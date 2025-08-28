@@ -5,9 +5,10 @@ import useContactViewModel from '../../useviewmodels/useContactViewModel'
 
 const Contact = () => {
     const { states, functions } = useContactViewModel()
-    const { goBack } = functions
+    const { goBack } = functions;
+    const { contactMenuItems } = states;
     return (
-        <ContactView goBack={goBack} />
+        <ContactView goBack={goBack} contactMenuItems={contactMenuItems} />
     )
 }
 

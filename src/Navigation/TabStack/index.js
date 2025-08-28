@@ -34,7 +34,7 @@ const TabStack = () => {
                     if (route.name === 'Dashboard') {
                         icon = focused ? tabIcons.tabHome : tabIcons.tabHome;
                     } if (route.name === 'Courses') {
-                        icon = focused ? tabIcons.tabHome : tabIcons.tabCourses;
+                        icon = focused ? tabIcons.tabCourses : tabIcons.tabCourses;
                     } if (route.name === 'Wishlist') {
                         icon = focused ? tabIcons.tabHome : tabIcons.tabWishlist;
                     } if (route.name === 'Cart') {

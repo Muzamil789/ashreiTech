@@ -14,5 +14,6 @@ export const COLORS = {
     faqBackground: '#E6E6E6',
     faqOnSelect: '#E5E8EE',
     UserBackground: '#F5F5F5',
-    locationBackground: '#009952'
+    locationBackground: '#009952',
+    footerBackground: '#2A2E36'
 }

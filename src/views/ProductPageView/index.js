@@ -31,9 +31,12 @@ const ProductPageView = ({
     showMoreSkills,
     companyImages,
     showAccordion,
-    handleShowAccordion
+    handleShowAccordion,
+    _item,
+    handleAddToCart,
 }) => {
 
+    console.log(_item, '_item _item _item')
 
     const fullDescription =
         'In this Built Operate Transfer (BOT) Model course you will learners with a complete understanding of data analytics tools & techniques. Getting started with this course can help you gain knowledge on data analysis, visualization, NumPy, SciPy, web scraping, and natural language processing. With this course it an ideal Kickstarter for anyone looking to become a data scientist. In this Built Operate Transfer (BOT) Model course you will learners with a complete understanding of data analytics tools & techniques. Getting started with this course can help you gain knowledge on data analysis, visualization, NumPy, SciPy, web scraping, and natural language processing. With this course it an ideal Kickstarter for anyone looking to become a data scientist.';
@@ -52,7 +55,7 @@ const ProductPageView = ({
                 <Image source={images.productImage} style={styles.bannerImage} />
                 <Container style={styles.containerStyle}>
                     <View style={styles.headerContainer}>
-                        <FontBold name={'Finance innovation with Oracle Financials'} style={styles.title} numberOfLines={2} />
+                        <FontBold name={_item.courseTitle} style={styles.title} />
                         <View style={styles.actionContainer}>
                             <TouchableOpacity>
                                 <Image source={tabIcons.tabWishlist} style={styles.wishlistImage} />
@@ -63,11 +66,11 @@ const ProductPageView = ({
                         </View>
                     </View>
                     <View>
-                        <FontRegular name={'Oracle Fusion Cloud Financials is a global financial platform that connects and automates your financial management processes.'} style={styles.description} />
+                        <FontRegular name={_item.courseDescription} style={styles.description} />
                     </View>
                     <View style={styles.instructorRow}>
                         <FontRegular name={'Instructor: '} />
-                        <FontBold name={'M. Rizwan Ahmed'} style={styles.instructorName} />
+                        <FontBold name={_item.instructor} style={styles.instructorName} />
                     </View>
                     <View style={styles.ratingContainer}>
                         <FontBold name={"Rating: "} style={styles.rating} />
@@ -178,7 +181,7 @@ const ProductPageView = ({
                     textStyle={styles.enrollButtonText}
                     onPress={handleEnrollCourse}
                 />
-                <Button name={'Add to cart'} />
+                <Button name={'Add to cart'} onPress={handleAddToCart} />
             </View>
 
             <SuccessModal

@@ -18,11 +18,11 @@ export const styles = StyleSheet.create({
         textAlign: 'left',
         fontWeight: '700',
         fontSize: vw * 5.5,
-        width: vw * 65
+        width: vw * 76,
     },
     headerContainer: {
         flexDirection: 'row',
-        gap: vw * 4
+        gap: vw * 2
     },
     wishlistImage: {
         width: vw * 5,
@@ -31,10 +31,9 @@ export const styles = StyleSheet.create({
     },
     actionContainer: {
         flexDirection: 'row',
-        width: vw * 22,
+        width: vw * 13,
         justifyContent: 'flex-end',
         gap: vw * 2,
-        // borderWidth: 1
     },
     description: {
         textAlign: 'left'

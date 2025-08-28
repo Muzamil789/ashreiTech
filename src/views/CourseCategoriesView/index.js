@@ -7,8 +7,10 @@ import FontBold from '../../components/Typography/FontBold'
 import FontSemiBold from '../../components/Typography/FontSemiBold'
 import Button from '../../components/Button'
 
-const CourseCategoriesView = ({ coursesCategories }) => {
-    const renderItem = ({ item }) => {
+const CourseCategoriesView = ({ coursesCategories, handleDetail, course }) => {
+
+    console.log(course.courses, 'course course course')
+    const renderItem = ({ item, index }) => {
         return (
             <View style={styles.courseContainer}>
                 <View style={styles.courseImageContainer}>
@@ -19,7 +21,7 @@ const CourseCategoriesView = ({ coursesCategories }) => {
                     <FontSemiBold name={item.courseDescription} numberOfLines={2} style={styles.courseDescription} />
                     <View style={styles.coursePriceRow}>
                         <FontBold name={`PKR ${item.coursePrice}`} style={styles.coursePrice} />
-                        <Button name={'View Details'} containerStyle={styles.detailButton} textStyle={styles.detailButtonText} />
+                        <Button name={'View Details'} containerStyle={styles.detailButton} textStyle={styles.detailButtonText} onPress={() => handleDetail(index)} />
                     </View>
                 </View>
             </View>
@@ -32,7 +34,7 @@ const CourseCategoriesView = ({ coursesCategories }) => {
             <Container style={styles.bodyContainer}>
 
                 <FlatList
-                    data={coursesCategories}
+                    data={course.courses}
                     renderItem={renderItem}
                     keyExtractor={(item) => item.id}
                     ListEmptyComponent={

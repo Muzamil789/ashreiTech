@@ -16,6 +16,7 @@ export const images = {
     course2: require('./images/course2.png'),
     course3: require('./images/course3.png'),
     course4: require('./images/course4.png'),
+    dashboardBackground: require('./images/dashboardBackground.png'),
 };
 
 export const icons = {
@@ -48,6 +49,14 @@ export const icons = {
     share: require('./icons/share.png'),
     menu: require('./icons/menu.png'),
     check: require('./icons/check.png'),
+    searchInputIcon: require('./icons/searchInputIcon.png'),
+    searchBackIcon: require('./icons/searchBackIcon.png'),
+    nextArrow: require('./icons/nextArrow.png'),
+    twitterLogo: require('./icons/twitterLogo.png'),
+    linkedInLogo: require('./icons/linkedInLogo.png'),
+    facebookLogo: require('./icons/facebookLogo.png'),
+    youtubeLogo: require('./icons/youtubeLogo.png'),
+
 };
 
 export const drawerIcons = {
@@ -90,4 +99,11 @@ export const notificationIcons = {
     notificationDiscount: require('./notificationIcons/notificationDiscount.png'),
     NotificationLocation: require('./notificationIcons/NotificationLocation.png'),
     notificationScholarship: require('./notificationIcons/notificationScholarship.png'),
+}
+
+export const courses = {
+    oracleFusion: require('./Courses/oracleFusion.png'),
+    microsoftAzure: require('./Courses/microsoftAzure.png'),
+    builtOperate: require('./Courses/builtOperate.png'),
+    ViableProduct: require('./Courses/ViableProduct.png'),
 }

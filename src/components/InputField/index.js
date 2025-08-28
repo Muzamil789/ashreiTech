@@ -30,6 +30,8 @@ const InputField = ({
     handleUploadDocument,
     uploadIcon,
     placeholderTextColor,
+    searchIcon,
+    handleSearch,
     ...rest
 
 }) => {
@@ -82,6 +84,14 @@ const InputField = ({
                     <Image source={icons.uploadDocument} style={styles.uploadIcon} />
                 </TouchableOpacity>
             )}
+
+            {searchIcon && (
+                <TouchableOpacity style={styles.uploadIconContainer} onPress={handleSearch}>
+                    <Image source={icons.searchInputIcon} style={styles.uploadIcon} />
+                </TouchableOpacity>
+            )}
+
+
             {error ? <FontRegular name={error} style={styles.errorText} /> : null}
         </View>
     )

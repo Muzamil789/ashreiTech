@@ -175,6 +175,9 @@ const useProductPageViewModel = () => {
     const handleShowAccordion = () => {
         setShowAccordion(!showAccordion)
     }
+    const handleAddToCart = () => {
+        navigation.navigate('Cart')
+    }
 
     return {
         states: {
@@ -198,7 +201,8 @@ const useProductPageViewModel = () => {
             handleReadMore,
             handleCheckbox,
             handleMoreSkills,
-            handleShowAccordion
+            handleShowAccordion,
+            handleAddToCart
         }
     }
 }

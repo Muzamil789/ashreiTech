@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     },
     infoContainer: {
         width: vw * 65,
+        justifyContent: 'space-between'
     },
     courseTitle: {
         fontSize: vw * 3.8,
@@ -44,10 +45,11 @@ export const styles = StyleSheet.create({
     detailButton: {
         paddingVertical: vh * .8,
         paddingHorizontal: vw * 3,
-        backgroundColor: '#3BB44E'
+        backgroundColor: '#3BB44E',
+        borderRadius: vw
     },
     detailButtonText: {
-        fontSize: vw * 3.8
+        fontSize: vw * 3
     },
     FlatListContainer: {
         gap: vh * 3

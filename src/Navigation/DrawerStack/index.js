@@ -18,8 +18,6 @@ import TrainingRoom from '../../screens/TrainingRoom';
 import Scholarship from '../../screens/Scholarship';
 import Checkout from '../../screens/Checkout';
 import Invite from '../../screens/Invite';
-import ProductPage from '../../screens/ProductPage';
-import CourseCategories from '../../screens/CoursesCategories';
 
 
 
@@ -81,18 +79,6 @@ const routes = [
         name: 'Help Center',
         icon: drawerIcons.drawerHelpCenter,
         to: 'Contact',
-    },
-    {
-        id: 9,
-        name: 'Product Page',
-        icon: drawerIcons.drawerHelpCenter,
-        to: 'ProductPage',
-    },
-    {
-        id: 9,
-        name: 'Courses Categories',
-        icon: drawerIcons.drawerHelpCenter,
-        to: 'CourseCategories',
     },
 ]
 
@@ -201,8 +187,6 @@ const DrawerStack = () => {
             <Drawer.Screen name='Scholarship' component={Scholarship} />
             <Drawer.Screen name='Checkout' component={Checkout} />
             <Drawer.Screen name='Invite' component={Invite} />
-            <Drawer.Screen name='ProductPage' component={ProductPage} />
-            <Drawer.Screen name='CourseCategories' component={CourseCategories} />
         </Drawer.Navigator>
 
     )

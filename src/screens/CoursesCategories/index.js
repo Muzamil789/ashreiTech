@@ -2,12 +2,13 @@ import React from 'react'
 import CourseCategoriesView from '../../views/CourseCategoriesView'
 import useCourseCategoriesViewModel from '../../useviewmodels/useCourseCategoriesViewModel';
 
-const CourseCategories = () => {
+const CourseCategories = ({ route }) => {
+    const { course } = route.params;
     const { states, functions } = useCourseCategoriesViewModel();
     const { coursesCategories } = states;
-    const { } = functions;
+    const { handleDetail } = functions;
     return (
-        <CourseCategoriesView coursesCategories={coursesCategories} />
+        <CourseCategoriesView coursesCategories={coursesCategories} handleDetail={handleDetail} course={course} />
     )
 }
 
